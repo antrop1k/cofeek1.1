@@ -1,0 +1,128 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #1E1E26;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* чтобы тело занимало всю высоту экрана */
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1280px;
+    width: 100%; /* занимает всю доступную ширину до max-width */
+    margin: 10px auto 0 auto; /* отступ сверху и по горизонтали */
+    display: flex;
+    flex-direction: column; /* расположение элементов внутри по колонке */
+    align-items: center; /* по горизонтали внутри контейнера */
+    box-sizing: border-box; /* учитываем паддинги и границы */
+    padding: 0 10px;
+}
+
+.neyro-visual {
+  width: 100%; /* или задайте фиксированную ширину, если нужно */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+header {
+    /* добавьте отступ снизу для отделения от main */
+    margin-bottom: 20px; /* или любое ваше значение */
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+    margin-top: 15px;
+    flex: 1; /* чтобы занимать доступное пространство, если нужно */
+    margin-bottom: 60px;
+}
+
+footer {
+    /* Убираем позицию фикс */
+    position: fixed;
+    bottom: 0px;
+    margin-top: 20px;
+}
+
+.panel-main{
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+.input-panel{
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    width: 300px;
+    font-size: 24px;
+}
+
+.button-arrow{
+    border: none;
+    background: transparent;
+}
+
+.button-arrow-img{
+    width: 30px;
+}
+
+.message {
+    font-size: 24px;
+    padding: 23px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 70%;
+    width: max-content;
+    color: #ffffff;
+
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+
+    word-break: break-word;
+}
+
+.myMessage{
+    background-color: #7836DE;
+    margin-left: auto;
+}
+
+.neyroMessage{
+    background-color: #5F5E63;
+    margin-right: 80px;
+}
+
+@media (max-width: 640px) {
+    .container {
+        margin: 10px 5px 0 5px;
+    }
+    .input-panel{
+        width: 200px;
+    }
+    .message {
+        font-size: 16px;
+        padding: 12px;
+    }
+}
+
+
+
+/* loading... */
+.loading-group{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
